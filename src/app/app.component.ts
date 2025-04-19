@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+
+import { HeaderComponent } from './header/header.component';
+import { UserInputComponent } from './user-input/user-input.component';
+import { InvestmentResultsComponent } from './investment-results/investment-results.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  imports: [HeaderComponent, UserInputComponent, InvestmentResultsComponent],
 })
-export class AppComponent {
-  title = 'InvestmentCalculator';
-}
+export class AppComponent {}
